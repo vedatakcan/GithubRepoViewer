@@ -21,7 +21,6 @@ This Android application allows users to search for Github repositories by enter
 - ViewBinding
 
 ## Screenshots  
-Here are some screenshots showcasing the app:  
 
 ![App Screenshots](https://github.com/vedatakcan/GithubRepoViewer/blob/main/screenshot.png)  
 
