@@ -16,4 +16,9 @@
         <item name="colorOnError">@color/on_error</item>
     </style>
 
+    <style name="Theme.App.RepoSearchApp" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/bg_splash_screen</item> <!-- Arkaplan rengi -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item> <!-- SVG veya PNG logonuz -->
+    </style>
+
 </resources>

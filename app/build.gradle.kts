@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("kotlin-kapt")
+    id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
     id("androidx.navigation.safeargs.kotlin") // Safe Args eklendi
 }
@@ -46,7 +47,6 @@ kapt {
     correctErrorTypes = true
 }
 
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -84,5 +84,8 @@ dependencies {
 
     // RecyclerView
     implementation(libs.androidx.recyclerview)
+
+    // Splash Screen API
+    implementation(libs.androidx.core.splashscreen)
 
 }
