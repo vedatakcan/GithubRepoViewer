@@ -13,12 +13,17 @@ class RepoAdapter @Inject constructor() : RecyclerView.Adapter<RepoAdapter.RepoV
 
     private var repoList: List<Repo> = emptyList()
     private val numberFormat = NumberFormat.getInstance()
+    var onItemClick: ((Repo) -> Unit)? = null
     inner class RepoViewHolder(private val binding: ItemRepoBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(repo: Repo) {
             binding.tvRepoName.text = repo.name
             binding.tvDescription.text = repo.description
             binding.tvStars.text = numberFormat.format(repo.stars)
             binding.tvLanguage.text = repo.language
+
+            binding.root.setOnClickListener {
+                onItemClick?.invoke(repo)
+            }
         }
     }
 

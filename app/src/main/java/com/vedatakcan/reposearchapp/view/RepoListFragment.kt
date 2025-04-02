@@ -1,5 +1,7 @@
 package com.vedatakcan.reposearchapp.view
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -79,6 +81,14 @@ class RepoListFragment : Fragment(R.layout.fragment_repo_list) {
                     binding.tvOwnerName.text = username // Kullanıcı adı TextView'da gösteriliyor
                 }
             }
+        }
+
+        adapter.onItemClick = { repo ->
+            // Github reposunu tarayıcıda aç
+            val url = "https://github.com/$username/${repo.name}"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+
         }
     }
 
